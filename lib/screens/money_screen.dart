@@ -59,28 +59,6 @@ class MoneyScreenState extends State<MoneyScreen> {
                 ),
               ),
             ),
-
-            Positioned(
-              top: MediaQuery.of(context).padding.top + 5,
-              left: 16,
-              right: 16,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  CustomIconButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    icon: Icons.arrow_back_ios_sharp,
-                  ),
-                  CustomIconButton(
-                    onPressed: () {},
-                    icon: Icons.settings_outlined,
-                  ),
-                ],
-              ),
-            ),
-
             // Scrollable Content
             Padding(
               padding: const EdgeInsets.only(
@@ -220,6 +198,27 @@ class MoneyScreenState extends State<MoneyScreen> {
                 "assets/lottie/success_confetti.json",
                 height: MediaQuery.of(context).size.height * 0.4,
                 fit: BoxFit.fill,
+              ),
+            ),
+
+            Positioned(
+              top: MediaQuery.of(context).padding.top + 5,
+              left: 16,
+              right: 16,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  CustomIconButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: Icons.arrow_back_ios_sharp,
+                  ),
+                  CustomIconButton(
+                    onPressed: () {},
+                    icon: Icons.settings_outlined,
+                  ),
+                ],
               ),
             ),
           ],
