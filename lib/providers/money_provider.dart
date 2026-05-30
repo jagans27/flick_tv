@@ -25,23 +25,23 @@ class MoneyProvider extends ChangeNotifier {
     ),
   ];
 
-  void setEnableSettings(bool v) {
-    if (enableSettings != v) {
-      enableSettings = v;
+  void setEnableSettings(bool value) {
+    if (enableSettings != value) {
+      enableSettings = value;
       notifyListeners();
     }
   }
 
-  void setUpdateColor(bool v) {
-    if (updateColor != v) {
-      updateColor = v;
+  void setUpdateColor(bool value) {
+    if (updateColor != value) {
+      updateColor = value;
       notifyListeners();
     }
   }
 
-  void setShowConfetti(bool v) {
-    if (showConfetti != v) {
-      showConfetti = v;
+  void setShowConfetti(bool value) {
+    if (showConfetti != value) {
+      showConfetti = value;
       notifyListeners();
     }
   }
