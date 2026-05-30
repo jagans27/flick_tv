@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:jagan/providers/money_provider.dart';
 import 'package:provider/provider.dart';
-import '../providers/animation_provider.dart';
 import 'money_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,8 +9,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = context.watch<AnimationProvider>();
-
     return AnnotatedRegion(
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
@@ -35,13 +33,18 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
+                    MoneyProvider moneyProvider = Provider.of<MoneyProvider>(
+                      context,
+                      listen: false,
+                    );
+                    moneyProvider.clear();
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (_) => const MoneyScreen()),
                     );
                   },
                   child: Text(
-                    provider.buttonLabel,
+                    "View Animation",
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 18,

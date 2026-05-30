@@ -23,22 +23,22 @@ class CustomIconButton extends StatelessWidget {
             height: 44,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: Colors.white.withOpacity(0.12),
+              color: Colors.white.withValues(alpha:0.12),
               border: Border.all(
-                color: Colors.white.withOpacity(0.15),
+                color: Colors.white.withValues(alpha:0.15),
                 width: 1,
               ),
               gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
                 colors: [
-                  Colors.white.withOpacity(0.20),
-                  Colors.white.withOpacity(0.05),
+                  Colors.white.withValues(alpha:0.20),
+                  Colors.white.withValues(alpha:0.05),
                 ],
               ),
               boxShadow: [
                 BoxShadow(
-                  color: Color.fromARGB(255, 88, 88, 88).withOpacity(0.1),
+                  color: Color.fromARGB(255, 88, 88, 88).withValues(alpha:0.1),
                   blurRadius: 12,
                   offset: const Offset(0, 6),
                 ),

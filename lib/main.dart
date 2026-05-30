@@ -1,8 +1,6 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
+import 'package:jagan/providers/money_provider.dart';
 import 'package:provider/provider.dart';
-import 'providers/animation_provider.dart';
 import 'screens/home_screen.dart';
 
 void main() {
@@ -15,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => AnimationProvider())],
+      providers: [ChangeNotifierProvider(create: (_) => MoneyProvider())],
       child: MaterialApp(
         theme: ThemeData(fontFamily: 'Gilroy'),
         debugShowCheckedModeBanner: false,
