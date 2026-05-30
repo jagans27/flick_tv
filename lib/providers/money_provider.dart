@@ -25,6 +25,7 @@ class MoneyProvider extends ChangeNotifier {
     ),
   ];
 
+  // This method will be called to toggle the settings button in the UI
   void setEnableSettings(bool value) {
     if (enableSettings != value) {
       enableSettings = value;
@@ -32,6 +33,7 @@ class MoneyProvider extends ChangeNotifier {
     }
   }
 
+  // This method will be called to toggle the color update in the UI
   void setUpdateColor(bool value) {
     if (updateColor != value) {
       updateColor = value;
@@ -39,6 +41,7 @@ class MoneyProvider extends ChangeNotifier {
     }
   }
 
+  // This method will be called to show or hide confetti in the UI
   void setShowConfetti(bool value) {
     if (showConfetti != value) {
       showConfetti = value;
@@ -46,6 +49,7 @@ class MoneyProvider extends ChangeNotifier {
     }
   }
 
+  // Call this method to reset all values to their initial state
   void clear() {
     enableSettings = false;
     updateColor = true;
